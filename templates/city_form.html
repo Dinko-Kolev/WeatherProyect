@@ -1,0 +1,17 @@
+{% include 'base/base.html' %}
+{% load static %}
+
+<form action="create/" method="post">
+{#    El tiempo en...#}
+    {{form}}
+    {% csrf_token %}
+    <button class="submit btn btn-secondary btn-lg btn-block" type="submit">
+        <div class="left">
+            SEARCH CITY
+        </div>
+        <div class="right">
+            <i class="fas fa-search"></i>
+        </div>
+    </button>
+
+</form>

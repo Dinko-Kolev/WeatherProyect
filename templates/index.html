@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="center-column">
+        <h1 class="title">
+            What's the weather like?
+        </h1>
+    </div>
+    <div class="center-column">
+        <div>
+            {% include 'city_form.html' %}
+        </div>
+        {% for city in cities %}
+            <div class="item-row">
+                <img src="http://openweathermap.org/img/w/{{ city.icon }}.png" alt="Image">
+                {{ city.temperature }}° C
+                {{ city.name }}
+                 <div>{{ city.time }} </div>
+                <div>{{ city.time }} {{ city.description }}</div>
+                <a href="{% url 'delete' city.id %}" class="boton-app btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</a>
+
+
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

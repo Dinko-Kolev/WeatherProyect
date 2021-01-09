@@ -1,0 +1,7 @@
+{% include 'base/base.html' %}
+{% load static %}
+    <form method="POST" action="" class="input center-column">
+        {{ form }}
+        {% csrf_token %}
+        <input type="submit" value="DELETE">
+    </form>
