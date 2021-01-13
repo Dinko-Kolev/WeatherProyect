@@ -15,7 +15,7 @@
                 <img src="http://openweathermap.org/img/w/{{ city.icon }}.png" alt="Image">
                 {{ city.temperature }}° C
                 {{ city.name }}
-                 <div>{{ city.time }} </div>
+                
                 <div>{{ city.time }} {{ city.description }}</div>
                 <a href="{% url 'delete' city.id %}" class="boton-app btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</a>
 
